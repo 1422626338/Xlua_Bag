@@ -1,0 +1,34 @@
+--只要是一个新的对象（面板），我们就 新建一张表
+local BasePanel = _G["BasePanel"]
+--创建一个MainPanel 表，继承自BasePanel
+BasePanel:subClass("MainPanel")
+
+local MainPanel = _G["MainPanel"]
+--需要做 实例化面板对象
+--为这个面板添加对应的功能
+
+--初始化面板对象
+function MainPanel:Init(name)       --这里（）self省略了
+    --用父类的方法
+    self.base.Init(self,name)
+
+    --为了织田家一次事件监听
+    if self.isInitEvent== false then
+        print(self:GetControl("btn_Role","Image"))
+        --*3.为空间加上事件监听
+        self:GetControl("btn_Role","Button").onClick:AddListener(function()
+            -- 匿名函数通过闭包捕获外层 Init 的 self
+            -- 此 self 与外层 self 是同一个变量
+            -- 并非由 AddListener 传入
+            self:BtnRoleClick()     --! 用的是外层 Init 的 self (因为function()参数表里面什么也没有，因此)
+        end)
+    end
+end
+    
+function MainPanel:BtnRoleClick()
+    --print(1234)
+    --print(self.panelObj)
+    --TODO 点击显示面板
+    BagPanel:ShowMe("BagPanel")
+end
+

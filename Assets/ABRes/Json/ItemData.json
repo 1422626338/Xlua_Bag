@@ -1,0 +1,8 @@
+[
+{"id":1,"name":"手套","icon":"icon_1","tips":"全村最好的手套"},
+{"id":2,"name":" 弓箭","icon":"icon_2","tips":"全村最好的弓箭"},
+{"id":3,"name":"蓝药","icon":"icon_3","tips":"恢复MP"},
+{"id":4,"name":"红药","icon":"icon_4","tips":" 恢复HP"},
+{"id":5,"name":" 红宝石","icon":"icon_5","tips":"合成道具"},
+{"id":6,"name":"蓝宝石","icon":"icon_6","tips":"合成道具"}
+]
